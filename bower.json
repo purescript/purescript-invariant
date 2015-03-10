@@ -1,0 +1,23 @@
+{
+  "name": "purescript-invariant",
+  "homepage": "https://github.com/purescript/purescript-invariant",
+  "description": "Invariant functors for PureScript",
+  "keywords": [
+    "purescript",
+    "invariant",
+    "functor"
+  ],
+  "authors": [
+    "Gary Burgess <gary.burgess@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output",
+    "bower.json",
+    "Gruntfile.js",
+    "package.json"
+  ]
+}
