@@ -12,11 +12,6 @@ module Data.Functor.Invariant where
 class Invariant f where
   invmap :: forall a b. (a -> b) -> (b -> a) -> f a -> f b
 
--- | As all `Functor`s are also trivially `Invariant`, this function can be
--- | used as the `invmap` implementation for all `Invariant` instances for
--- | `Functors`.
-invmapF :: forall f a b. (Functor f) => (a -> b) -> (b -> a) -> f a -> f b
-invmapF = const <<< (<$>)
-
-instance invariantArr :: Invariant ((->) a) where
-  invmap = invmapF
+-- | All `Functor`s are also trivially `Invariant`.
+instance invariantFromFunctor :: (Functor f) => Invariant f where
+  invmap = const <<< (<$>)
