@@ -19,18 +19,10 @@ An `Invariant` instance should satisfy the following laws:
 - Composition: `invmap g1 g2 <<< invmap f1 f2 = invmap (g1 <<< f1) (f2 <<< g2)`
 
 
-#### `invmapF`
+#### `invariantFromFunctor`
 
 ``` purescript
-invmapF :: forall f a b. (Functor f) => (a -> b) -> (b -> a) -> f a -> f b
+instance invariantFromFunctor :: (Functor f) => Invariant f
 ```
 
-As all `Functor`s are also trivially `Invariant`, this function can be
-used as the `invmap` implementation for all `Invariant` instances for
-`Functors`.
-
-#### `invariantArr`
-
-``` purescript
-instance invariantArr :: Invariant (Prim.Function a)
-```
+All `Functor`s are also trivially `Invariant`.
