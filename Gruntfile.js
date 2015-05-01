@@ -11,12 +11,7 @@ module.exports = function(grunt) {
 
     clean: ["output"],
 
-    pscMake: {
-      options: {
-        noPrelude: true
-      },
-      src: ["<%=libFiles%>"]
-    },
+    pscMake: ["<%=libFiles%>"],
     dotPsci: ["<%=libFiles%>"],
     pscDocs: {
         readme: {

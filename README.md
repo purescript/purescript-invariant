@@ -29,8 +29,15 @@ As all `Functor`s are also trivially `Invariant`, this function can be
 used as the `imap` implementation for all `Invariant` instances for
 `Functors`.
 
-#### `invariantArr`
+#### `invariantFn`
 
 ``` purescript
-instance invariantArr :: Invariant (Prim.Function a)
+instance invariantFn :: Invariant (Prim.Function a)
+```
+
+
+#### `invariantArray`
+
+``` purescript
+instance invariantArray :: Invariant Array
 ```
