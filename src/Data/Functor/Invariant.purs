@@ -16,7 +16,10 @@ class Invariant f where
 -- | used as the `imap` implementation for all `Invariant` instances for
 -- | `Functors`.
 imapF :: forall f a b. (Functor f) => (a -> b) -> (b -> a) -> f a -> f b
-imapF = const <<< (<$>)
+imapF = const <<< map 
 
-instance invariantArr :: Invariant ((->) a) where
+instance invariantFn :: Invariant ((->) a) where
+  imap = imapF
+
+instance invariantArray :: Invariant Array where
   imap = imapF
