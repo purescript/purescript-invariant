@@ -1,43 +1,15 @@
-# Module Documentation
+# purescript-invariant
 
-## Module Data.Functor.Invariant
+[![Build Status](https://travis-ci.org/purescript/purescript-invariant.svg?branch=master)](https://travis-ci.org/purescript/purescript-invariant)
 
-#### `Invariant`
+Invariant functors.
 
-``` purescript
-class Invariant f where
-  imap :: forall a b. (a -> b) -> (b -> a) -> f a -> f b
+## Installation
+
+```
+bower install purescript-invariant
 ```
 
-A type of functor that can be used to adapt the type of a wrapped function
-where the parameterised type occurs in both the positive and negative
-position, for example, `F (a -> a)`.
+## Module documentation
 
-An `Invariant` instance should satisfy the following laws:
-
-- Identity: `imap id id = id`
-- Composition: `imap g1 g2 <<< imap f1 f2 = imap (g1 <<< f1) (f2 <<< g2)`
-
-
-#### `imapF`
-
-``` purescript
-imapF :: forall f a b. (Functor f) => (a -> b) -> (b -> a) -> f a -> f b
-```
-
-As all `Functor`s are also trivially `Invariant`, this function can be
-used as the `imap` implementation for all `Invariant` instances for
-`Functors`.
-
-#### `invariantFn`
-
-``` purescript
-instance invariantFn :: Invariant (Prim.Function a)
-```
-
-
-#### `invariantArray`
-
-``` purescript
-instance invariantArray :: Invariant Array
-```
+- [Data.Functor.Invariant](docs/Data.Functor.Invariant.md)
