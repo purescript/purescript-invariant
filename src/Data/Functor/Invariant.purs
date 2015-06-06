@@ -1,5 +1,7 @@
 module Data.Functor.Invariant where
 
+import Prelude
+
 -- | A type of functor that can be used to adapt the type of a wrapped function
 -- | where the parameterised type occurs in both the positive and negative
 -- | position, for example, `F (a -> a)`.
