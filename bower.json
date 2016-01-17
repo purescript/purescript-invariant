@@ -2,14 +2,6 @@
   "name": "purescript-invariant",
   "homepage": "https://github.com/purescript/purescript-invariant",
   "description": "Invariant functors for PureScript",
-  "keywords": [
-    "purescript",
-    "invariant",
-    "functor"
-  ],
-  "authors": [
-    "Gary Burgess <gary.burgess@gmail.com>"
-  ],
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -25,6 +17,6 @@
     "package.json"
   ],
   "dependencies": {
-    "purescript-prelude": "^0.1.0"
+    "purescript-prelude": "^1.0.0-rc.1"
   }
 }

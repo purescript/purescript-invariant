@@ -1,6 +1,7 @@
 module Data.Functor.Invariant where
 
-import Prelude
+import Data.Function (const, (<<<))
+import Data.Functor (class Functor, map)
 
 -- | A type of functor that can be used to adapt the type of a wrapped function
 -- | where the parameterised type occurs in both the positive and negative
@@ -14,14 +15,14 @@ import Prelude
 class Invariant f where
   imap :: forall a b. (a -> b) -> (b -> a) -> f a -> f b
 
--- | As all `Functor`s are also trivially `Invariant`, this function can be
--- | used as the `imap` implementation for all `Invariant` instances for
--- | `Functors`.
-imapF :: forall f a b. (Functor f) => (a -> b) -> (b -> a) -> f a -> f b
-imapF = const <<< map 
-
 instance invariantFn :: Invariant ((->) a) where
   imap = imapF
 
 instance invariantArray :: Invariant Array where
   imap = imapF
+
+-- | As all `Functor`s are also trivially `Invariant`, this function can be
+-- | used as the `imap` implementation for any types that has an existing
+-- | `Functor` instance.
+imapF :: forall f a b. Functor f => (a -> b) -> (b -> a) -> f a -> f b
+imapF = const <<< map

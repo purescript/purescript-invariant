@@ -12,6 +12,6 @@ Invariant functors.
 bower install purescript-invariant
 ```
 
-## Module documentation
+## Documentation
 
-- [Data.Functor.Invariant](docs/Data/Functor/Invariant.md)
+Module documentation is [published on Pursuit](http://pursuit.purescript.org/packages/purescript-invariant).
