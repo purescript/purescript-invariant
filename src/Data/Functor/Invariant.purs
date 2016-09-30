@@ -1,6 +1,5 @@
 module Data.Functor.Invariant where
 
-import Data.Function (const, (<<<))
 import Data.Functor (class Functor, map)
 
 -- | A type of functor that can be used to adapt the type of a wrapped function
@@ -25,4 +24,4 @@ instance invariantArray :: Invariant Array where
 -- | used as the `imap` implementation for any types that has an existing
 -- | `Functor` instance.
 imapF :: forall f a b. Functor f => (a -> b) -> (b -> a) -> f a -> f b
-imapF = const <<< map
+imapF f _ = map f
