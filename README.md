@@ -1,8 +1,7 @@
 # purescript-invariant
 
-[![Latest release](http://img.shields.io/bower/v/purescript-invariant.svg)](https://github.com/purescript/purescript-invariant/releases)
-[![Build Status](https://travis-ci.org/purescript/purescript-invariant.svg?branch=master)](https://travis-ci.org/purescript/purescript-invariant)
-[![Dependency Status](https://www.versioneye.com/user/projects/55848cc4363861001b0001af/badge.svg?style=flat)](https://www.versioneye.com/user/projects/55848cc4363861001b0001af)
+[![Latest release](http://img.shields.io/github/release/purescript/purescript-invariant.svg)](https://github.com/purescript/purescript-invariant/releases)
+[![Build status](https://travis-ci.org/purescript/purescript-invariant.svg?branch=master)](https://travis-ci.org/purescript/purescript-invariant)
 
 Invariant functors.
 
