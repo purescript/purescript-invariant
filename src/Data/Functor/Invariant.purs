@@ -1,6 +1,13 @@
 module Data.Functor.Invariant where
 
+import Control.Semigroupoid ((<<<))
 import Data.Functor (class Functor, map)
+import Data.Monoid.Additive (Additive(..))
+import Data.Monoid.Conj (Conj(..))
+import Data.Monoid.Disj (Disj(..))
+import Data.Monoid.Dual (Dual(..))
+import Data.Monoid.Endo (Endo(..))
+import Data.Monoid.Multiplicative (Multiplicative(..))
 
 -- | A type of functor that can be used to adapt the type of a wrapped function
 -- | where the parameterised type occurs in both the positive and negative
@@ -19,6 +26,24 @@ instance invariantFn :: Invariant ((->) a) where
 
 instance invariantArray :: Invariant Array where
   imap = imapF
+
+instance invariantAdditive :: Invariant Additive where
+  imap f _ (Additive x) = Additive (f x)
+
+instance invariantConj :: Invariant Conj where
+  imap f _ (Conj x) = Conj (f x)
+
+instance invariantDisj :: Invariant Disj where
+  imap f _ (Disj x) = Disj (f x)
+
+instance invariantDual :: Invariant Dual where
+  imap f _ (Dual x) = Dual (f x)
+
+instance invariantEndo :: Invariant (Endo Function) where
+  imap ab ba (Endo f) = Endo (ab <<< f <<< ba)
+
+instance invariantMultiplicative :: Invariant Multiplicative where
+  imap f _ (Multiplicative x) = Multiplicative (f x)
 
 -- | As all `Functor`s are also trivially `Invariant`, this function can be
 -- | used as the `imap` implementation for any types that has an existing
