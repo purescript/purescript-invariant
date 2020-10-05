@@ -8,6 +8,7 @@ import Data.Monoid.Disj (Disj(..))
 import Data.Monoid.Dual (Dual(..))
 import Data.Monoid.Endo (Endo(..))
 import Data.Monoid.Multiplicative (Multiplicative(..))
+import Data.Monoid.Alternate (Alternate(..))
 
 -- | A type of functor that can be used to adapt the type of a wrapped function
 -- | where the parameterised type occurs in both the positive and negative
@@ -44,6 +45,9 @@ instance invariantEndo :: Invariant (Endo Function) where
 
 instance invariantMultiplicative :: Invariant Multiplicative where
   imap f _ (Multiplicative x) = Multiplicative (f x)
+
+instance invariantAlternate :: Invariant f => Invariant (Alternate f) where
+  imap f _ (Alternate x) = Alternate (f x)
 
 -- | As all `Functor`s are also trivially `Invariant`, this function can be
 -- | used as the `imap` implementation for any types that has an existing
