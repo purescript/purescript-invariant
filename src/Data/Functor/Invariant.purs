@@ -19,6 +19,7 @@ import Data.Monoid.Alternate (Alternate(..))
 -- | - Identity: `imap id id = id`
 -- | - Composition: `imap g1 g2 <<< imap f1 f2 = imap (g1 <<< f1) (f2 <<< g2)`
 -- |
+class Invariant :: (Type -> Type) -> Constraint
 class Invariant f where
   imap :: forall a b. (a -> b) -> (b -> a) -> f a -> f b
 
