@@ -48,7 +48,7 @@ instance invariantMultiplicative :: Invariant Multiplicative where
   imap f _ (Multiplicative x) = Multiplicative (f x)
 
 instance invariantAlternate :: Invariant f => Invariant (Alternate f) where
-  imap f _ (Alternate x) = Alternate (f x)
+  imap f g (Alternate x) = Alternate (imap f g x)
 
 -- | As all `Functor`s are also trivially `Invariant`, this function can be
 -- | used as the `imap` implementation for any types that has an existing
