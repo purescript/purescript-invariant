@@ -1,14 +1,14 @@
 # purescript-invariant
 
 [![Latest release](http://img.shields.io/github/release/purescript/purescript-invariant.svg)](https://github.com/purescript/purescript-invariant/releases)
-[![Build status](https://travis-ci.org/purescript/purescript-invariant.svg?branch=master)](https://travis-ci.org/purescript/purescript-invariant)
+[![Build status](https://github.com/purescript/purescript-invariant/workflows/CI/badge.svg?branch=master)](https://github.com/purescript/purescript-invariant/actions?query=workflow%3ACI+branch%3Amaster)
 
 Invariant functors.
 
 ## Installation
 
 ```
-bower install purescript-invariant
+spago install invariant
 ```
 
 ## Documentation
