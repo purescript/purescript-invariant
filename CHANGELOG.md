@@ -5,12 +5,16 @@ Notable changes to this project are documented in this file. The format is based
 ## [Unreleased]
 
 Breaking changes:
+- Added support for PureScript 0.14 and dropped support for all previous versions (#12)
 
 New features:
+- Added an `Alternate` instance (#13)
 
 Bugfixes:
 
 Other improvements:
+- Migrated CI to GitHub Actions and updated installation instructions to use Spago (#14)
+- Added a changelog and pull request template (#15)
 
 ## [v4.1.0](https://github.com/purescript/purescript-invariant/releases/tag/v4.1.0) - 2018-07-18
 
@@ -18,7 +22,7 @@ Other improvements:
 
 ## [v4.0.0](https://github.com/purescript/purescript-invariant/releases/tag/v4.0.0) - 2018-05-22
 
-Updated for PureScript 0.12
+- Updated for PureScript 0.12
 
 ## [v3.0.0](https://github.com/purescript/purescript-invariant/releases/tag/v3.0.0) - 2017-03-25
 
@@ -42,15 +46,10 @@ This release is intended for the PureScript 0.9.1 compiler and newer.
 
 This release works with versions 0.7.\* of the PureScript compiler. It will not work with older versions. If you are using an older version, you should require an older, compatible version of this library.
 
-## [v0.3.0-rc.1](https://github.com/purescript/purescript-invariant/releases/tag/v0.3.0-rc.1) - 2015-06-06
-
-Initial release candidate of the library intended for the 0.7 compiler.
-
 ## [v0.2.0](https://github.com/purescript/purescript-invariant/releases/tag/v0.2.0) - 2015-04-12
 
-- `invmap` renamed as `imap`
+- Renamed `invmap` to `imap`
 
 ## [v0.1.0](https://github.com/purescript/purescript-invariant/releases/tag/v0.1.0) - 2015-03-10
 
-Initial release
-
+- Initial release
