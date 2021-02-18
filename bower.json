@@ -16,7 +16,7 @@
     "package.json"
   ],
   "dependencies": {
-    "purescript-prelude": "master",
-    "purescript-control": "master"
+    "purescript-control": "^5.0.0",
+    "purescript-prelude": "^5.0.0"
   }
 }
