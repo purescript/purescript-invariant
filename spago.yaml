@@ -1,0 +1,10 @@
+package:
+  name: invariant
+  description: Invariant functors
+  build:
+    strict: true
+    pedanticPackages: true
+  dependencies:
+    - control: ">=6.0.0 <7.0.0"
+    - prelude: ">=6.0.0 <7.0.0"
+workspace: {}
