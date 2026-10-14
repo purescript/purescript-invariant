@@ -17,6 +17,7 @@ Other improvements:
 ## [v6.0.0](https://github.com/purescript/purescript-invariant/releases/tag/v6.0.0) - 2022-04-27
 
 Breaking changes:
+
 - Update project and deps to PureScript v0.15.0 (#15 by @JordanMartinez)
 
 New features:
@@ -28,14 +29,17 @@ Other improvements:
 ## [v5.0.0](https://github.com/purescript/purescript-invariant/releases/tag/v5.0.0) - 2021-02-26
 
 Breaking changes:
+
 - Added support for PureScript 0.14 and dropped support for all previous versions (#12)
 
 New features:
+
 - Added an `Alternate` instance (#13)
 
 Bugfixes:
 
 Other improvements:
+
 - Migrated CI to GitHub Actions and updated installation instructions to use Spago (#14)
 - Added a changelog and pull request template (#15)
 

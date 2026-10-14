@@ -1,7 +1,7 @@
 {
   "private": true,
-  "license": "BSD-3-Clause",
   "homepage": "https://github.com/purescript/purescript-invariant",
+  "license": "BSD-3-Clause",
   "repository": "github:purescript/purescript-invariant",
   "scripts": {
     "build": "spago build",
