@@ -3,12 +3,12 @@ module Data.Functor.Invariant where
 import Control.Semigroupoid ((<<<))
 import Data.Functor (class Functor, map)
 import Data.Monoid.Additive (Additive(..))
+import Data.Monoid.Alternate (Alternate(..))
 import Data.Monoid.Conj (Conj(..))
 import Data.Monoid.Disj (Disj(..))
 import Data.Monoid.Dual (Dual(..))
 import Data.Monoid.Endo (Endo(..))
 import Data.Monoid.Multiplicative (Multiplicative(..))
-import Data.Monoid.Alternate (Alternate(..))
 
 -- | A type of functor that can be used to adapt the type of a wrapped function
 -- | where the parameterised type occurs in both the positive and negative

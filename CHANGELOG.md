@@ -12,9 +12,22 @@ Bugfixes:
 
 Other improvements:
 
+## [v6.0.1](https://github.com/purescript/purescript-invariant/releases/tag/v6.0.1) - 2026-10-17
+
+Breaking changes:
+
+New features:
+
+Bugfixes:
+
+Other improvements:
+
+- Migrate from Bower/Pulp to Spago and update CI and formatting (#20 by @thomashoneyman)
+
 ## [v6.0.0](https://github.com/purescript/purescript-invariant/releases/tag/v6.0.0) - 2022-04-27
 
 Breaking changes:
+
 - Update project and deps to PureScript v0.15.0 (#15 by @JordanMartinez)
 
 New features:
@@ -26,14 +39,17 @@ Other improvements:
 ## [v5.0.0](https://github.com/purescript/purescript-invariant/releases/tag/v5.0.0) - 2021-02-26
 
 Breaking changes:
+
 - Added support for PureScript 0.14 and dropped support for all previous versions (#12)
 
 New features:
+
 - Added an `Alternate` instance (#13)
 
 Bugfixes:
 
 Other improvements:
+
 - Migrated CI to GitHub Actions and updated installation instructions to use Spago (#14)
 - Added a changelog and pull request template (#15)
 
@@ -74,3 +90,5 @@ This release works with versions 0.7.\* of the PureScript compiler. It will not 
 ## [v0.1.0](https://github.com/purescript/purescript-invariant/releases/tag/v0.1.0) - 2015-03-10
 
 - Initial release
+
+[Unreleased]: https://github.com/purescript/purescript-invariant/compare/v6.0.1...HEAD
