@@ -90,3 +90,5 @@ This release works with versions 0.7.\* of the PureScript compiler. It will not 
 ## [v0.1.0](https://github.com/purescript/purescript-invariant/releases/tag/v0.1.0) - 2015-03-10
 
 - Initial release
+
+[Unreleased]: https://github.com/purescript/purescript-invariant/compare/v6.0.1...HEAD
